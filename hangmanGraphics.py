@@ -8,7 +8,7 @@ from ggame import *
 def pickWord(): #Should take no arguments. The function should choose a random word. My program had five random words to chose from, but yours can have more if you like.
     rword = randint(1,6)
     if rword = 1:
-        word = 'Computer'
+        word = 'computer'
     if rword = 2:
         word = 'pneumonoultramicroscopicsilicovolcanoconiosis'
     if rword = 3:
