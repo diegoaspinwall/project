@@ -4,7 +4,7 @@
 
 from random import randint
 from ggame import *
-
+"""
 def pickWord(): #Should take no arguments. The function should choose a random word. My program had five random words to chose from, but yours can have more if you like.
     rword = randint(1,6)
     if rword = 1:
@@ -28,8 +28,22 @@ def printHangman(incguesses): #Should take one argument, the number of incorrect
 
 def keyPress(event): #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letterers that have been guessed.
     
-
+"""
 if __name__ == '__main__':
+    
+    data = {}
+    
+    
     black = Color(0x000000,1)
     green = Color(0x00ff00,1)
     red = Color(0xff0000,1)
+    white = Color(0x111111,1)
+    
+    floor = RectangleAsset(400,150,LineStyle(4,black), white)
+    
+    Sprite(floor)
+    App().run()
+
+
+
+
