@@ -41,7 +41,7 @@ if __name__ == '__main__':
     
     floor = RectangleAsset(400,150,LineStyle(4,black), white)
     
-    Sprite(floor, (50,300)
+    Sprite(floor, (50,300))
     App().run()
 
 
