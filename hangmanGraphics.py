@@ -21,13 +21,14 @@ def pickWord(): #Should take no arguments. The function should choose a random w
         return 'boolean'
 """    
 def wordComplete(): #Should take no arguments. The function should return True if all the letters in the word have been guessed and False otherwise.
-    wordchar = len(word)
+    
 
 def printHangman(incguesses): #Should take one argument, the number of incorrect guesses. The function should print out a new part of the body based on how many wrong guesses have occurred.
     
 
 def keyPress(event): #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letterers that have been guessed.
     
+
 """
 if __name__ == '__main__':
     
@@ -55,8 +56,9 @@ if __name__ == '__main__':
     Sprite(beamup, (50,25))
     Sprite(beamright, (50,0))
     Sprite(deathrope, (200,50))
+    
+    #App().listenKeyEvent('keydown','a',?)
     App().run()
 
-
-
+#Useful detail - event.key contains the key that was pressed to trigger the key press function. You will need to listen for 26 different keys (use a loop to shorten this code!)
 
