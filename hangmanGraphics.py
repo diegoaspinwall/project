@@ -43,6 +43,7 @@ if __name__ == '__main__':
     beamup = RectangleAsset(50,300,LineStyle(4,black), white)
     
     Sprite(floor, (50,300))
+    Sprite(beamup, (50,0))
     App().run()
 
 
