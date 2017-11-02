@@ -4,7 +4,7 @@
 
 from random import randint
 from ggame import *
-"""
+
 def pickWord(): #Should take no arguments. The function should choose a random word. My program had five random words to chose from, but yours can have more if you like.
     rword = randint(1,6)
     if rword = 1:
@@ -19,7 +19,7 @@ def pickWord(): #Should take no arguments. The function should choose a random w
         return 'pseudopseudohypoparathyroidism'
     if rword = 6:
         return 'spectrophotofluorometrically'
-    
+"""    
 def wordComplete(): #Should take no arguments. The function should return True if all the letters in the word have been guessed and False otherwise.
     wordchar = len(word)
 
