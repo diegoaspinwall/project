@@ -39,9 +39,12 @@ if __name__ == '__main__':
     red = Color(0xff0000,1)
     white = Color(0xffffff,1)
     
-    floor = RectangleAsset(300,100,LineStyle(4,black), white)
-    beamup = RectangleAsset(50,275,LineStyle(4,black), white)
-    beamright = RectangleAsset(200,50,LineStyle(4,black), white)
+    blackline = LineStyle(4,black)
+    
+    floor = RectangleAsset(300,100,blackline, white)
+    beamup = RectangleAsset(50,275,blackline, white)
+    beamright = RectangleAsset(200,50,blackline, white)
+    deathrope = LineAsset(50,160,blackline)
     
     Sprite(floor, (50,300))
     Sprite(beamup, (50,25))
