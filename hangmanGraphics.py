@@ -44,7 +44,7 @@ if __name__ == '__main__':
     floor = RectangleAsset(300,100,blackline, white)
     beamup = RectangleAsset(50,275,blackline, white)
     beamright = RectangleAsset(200,50,blackline, white)
-    deathrope = LineAsset(0,50,blackline)
+    deathrope = LineAsset(0,40,blackline)
     
     Sprite(floor, (50,300))
     Sprite(beamup, (50,25))
