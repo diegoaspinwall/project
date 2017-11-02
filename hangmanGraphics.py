@@ -10,15 +10,15 @@ def pickWord(): #Should take no arguments. The function should choose a random w
     if rword == 1:
         return 'computer'
     if rword == 2:
-        return 'pneumonoultramicroscopicsilicovolcanoconiosis'
+        return 'kernighan'
     if rword == 3:
-        return 'floccinaucinihilipilification'
+        return 'binary'
     if rword == 4:
-        return 'antidisestablishmentarianism'
+        return 'brython'
     if rword == 5:
-        return 'pseudopseudohypoparathyroidism'
+        return 'programming'
     if rword == 6:
-        return 'spectrophotofluorometrically'
+        return 'boolean'
 """    
 def wordComplete(): #Should take no arguments. The function should return True if all the letters in the word have been guessed and False otherwise.
     wordchar = len(word)
@@ -46,10 +46,10 @@ if __name__ == '__main__':
     beamup = RectangleAsset(50,275,blackline, white)
     beamright = RectangleAsset(200,50,blackline, white)
     deathrope = LineAsset(0,40,blackline)
-    underline = LineAsset(50,0,blackline)
+    underline = LineAsset(40,0,blackline)
     
     for i in range(0,len(word)):
-        Sprite(underline, (((50+50)*i),500))
+        Sprite(underline, (((10+50)*i),500))
     
     Sprite(floor, (50,300))
     Sprite(beamup, (50,25))
