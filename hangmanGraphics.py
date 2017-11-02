@@ -39,7 +39,7 @@ if __name__ == '__main__':
     green = Color(0x00ff00,1)
     red = Color(0xff0000,1)
     white = Color(0xffffff,1)
-    '''
+    
     blackline = LineStyle(4,black)
     
     floor = RectangleAsset(300,100,blackline, white)
@@ -47,14 +47,14 @@ if __name__ == '__main__':
     beamright = RectangleAsset(200,50,blackline, white)
     deathrope = LineAsset(0,40,blackline)
     underline = LineAsset(50,0,blackline)
-    
+    '''
     for i in range(0,word):
         Sprite(underline, ((50+50*i),500))
-    
+    '''
     Sprite(floor, (50,300))
     Sprite(beamup, (50,25))
     Sprite(beamright, (50,0))
-    Sprite(deathrope, (200,50))'''
+    Sprite(deathrope, (200,50))
     App().run()
 
 
