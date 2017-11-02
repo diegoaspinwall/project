@@ -49,7 +49,7 @@ if __name__ == '__main__':
     underline = LineAsset(50,0,blackline)
     
     for i in range(0,len(word)):
-        Sprite(underline, ((50+50*i),500))
+        Sprite(underline, (((50+50)*i),500))
     
     Sprite(floor, (50,300))
     Sprite(beamup, (50,25))
