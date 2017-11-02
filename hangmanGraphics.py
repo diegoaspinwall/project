@@ -39,7 +39,7 @@ if __name__ == '__main__':
     red = Color(0xff0000,1)
     white = Color(0xffffff,1)
     
-    floor = RectangleAsset(400,150,LineStyle(4,black), white)
+    floor = RectangleAsset(300,100,LineStyle(4,black), white)
     
     Sprite(floor, (50,300))
     App().run()
