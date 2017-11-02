@@ -49,7 +49,7 @@ if __name__ == '__main__':
     Sprite(floor, (50,300))
     Sprite(beamup, (50,25))
     Sprite(beamright, (50,0))
-    Sprite(deathrope, (200,100))
+    Sprite(deathrope, (200,50))
     App().run()
 
 
