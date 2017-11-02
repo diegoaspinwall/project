@@ -30,4 +30,6 @@ def keyPress(event): #Should take one argument, event. The function should fill 
     
 
 if __name__ == '__main__':
-    
+    black = Color(0x000000,1)
+    green = Color(0x00ff00,1)
+    red = Color(0xff0000,1)
