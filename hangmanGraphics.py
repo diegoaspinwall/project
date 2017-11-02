@@ -47,10 +47,10 @@ if __name__ == '__main__':
     beamright = RectangleAsset(200,50,blackline, white)
     deathrope = LineAsset(0,40,blackline)
     underline = LineAsset(50,0,blackline)
-    '''
-    for i in range(0,word):
+    
+    for i in range(0,len(word)):
         Sprite(underline, ((50+50*i),500))
-    '''
+    
     Sprite(floor, (50,300))
     Sprite(beamup, (50,25))
     Sprite(beamright, (50,0))
