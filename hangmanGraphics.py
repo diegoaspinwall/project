@@ -41,7 +41,7 @@ if __name__ == '__main__':
     
     floor = RectangleAsset(300,100,LineStyle(4,black), white)
     beamup = RectangleAsset(50,275,LineStyle(4,black), white)
-    beamright = RectangleAsset(100,50,LineStyle(4,black), white)
+    beamright = RectangleAsset(200,50,LineStyle(4,black), white)
     
     Sprite(floor, (50,300))
     Sprite(beamup, (50,25))
