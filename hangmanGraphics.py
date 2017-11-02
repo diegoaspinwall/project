@@ -40,10 +40,10 @@ if __name__ == '__main__':
     white = Color(0xffffff,1)
     
     floor = RectangleAsset(300,100,LineStyle(4,black), white)
-    beamup = RectangleAsset(50,300,LineStyle(4,black), white)
+    beamup = RectangleAsset(50,275,LineStyle(4,black), white)
     
     Sprite(floor, (50,300))
-    Sprite(beamup, (50,0))
+    Sprite(beamup, (50,25))
     App().run()
 
 
