@@ -45,6 +45,7 @@ if __name__ == '__main__':
     
     Sprite(floor, (50,300))
     Sprite(beamup, (50,25))
+    Sprite(beamright, (50,0))
     App().run()
 
 
