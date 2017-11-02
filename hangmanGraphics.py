@@ -33,6 +33,7 @@ if __name__ == '__main__':
     
     data = {}
     
+    word = pickWord()
     
     black = Color(0x000000,1)
     green = Color(0x00ff00,1)
@@ -45,6 +46,10 @@ if __name__ == '__main__':
     beamup = RectangleAsset(50,275,blackline, white)
     beamright = RectangleAsset(200,50,blackline, white)
     deathrope = LineAsset(0,40,blackline)
+    underline = LineAsset(50,0,blackline)
+    
+    for i in range(0,word):
+        Sprite(underline, ((50+50*i),500))
     
     Sprite(floor, (50,300))
     Sprite(beamup, (50,25))
