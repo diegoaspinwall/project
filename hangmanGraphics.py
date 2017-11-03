@@ -31,7 +31,10 @@ def keyPress(event): #Should take one argument, event. The function should fill 
     if event.key not in guessed:
         guessed = event.key
     guessedbank = TextAsset(guessed,fill=black,style='bold 30pt Times')
-    Sprite(guessedbank, (300,100))
+    Sprite(guessedbank, (400,100))
+    
+    if event.key in word:
+        print(event.key)
 
 
 if __name__ == '__main__':
