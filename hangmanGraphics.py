@@ -57,7 +57,7 @@ if __name__ == '__main__':
     Sprite(beamright, (50,0))
     Sprite(deathrope, (200,50))
     
-    for ch in '':
+    for ch in 'abcdefghijklmnopqrstuvwxyz':
         App().listenKeyEvent('keydown',ch,keyPress)
     App().run()
 
