@@ -36,7 +36,7 @@ def keyPress(event): #Should take one argument, event. The function should fill 
     if event.key in word:
         print(event.key)
         #spot = where letter goes
-        #Sprite(TextAsset(event.key,fill=black,style='bold 30pt Times'), ((10+50)*spot),500))
+        #Sprite(TextAsset(event.key,fill=black,style='bold 30pt Times'), ((60)*spot),500))
 
 
 if __name__ == '__main__':
@@ -59,7 +59,7 @@ if __name__ == '__main__':
     underline = LineAsset(40,0,blackline)
     
     for i in range(0,len(word)):
-        Sprite(underline, (((10+50)*i),500))
+        Sprite(underline, (((60)*i),500))
     
     Sprite(floor, (50,300))
     Sprite(beamup, (50,25))
