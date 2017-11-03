@@ -30,7 +30,7 @@ def keyPress(event): #Should take one argument, event. The function should fill 
     guessed = ''
     if event.key not in guessed:
         guessed = event.key
-    guessedbank = TextAsset(guessed,fill=green,style='bold 40pt Times')
+    guessedbank = TextAsset(guessed,fill=black,style='bold 30pt Times')
     Sprite(guessedbank, (300,100))
 
 
