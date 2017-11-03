@@ -57,7 +57,8 @@ if __name__ == '__main__':
     Sprite(beamright, (50,0))
     Sprite(deathrope, (200,50))
     
-    #App().listenKeyEvent('keydown','a',?)
+    for ch in '':
+        App().listenKeyEvent('keydown',ch,keyPress)
     App().run()
 
 #Useful detail - event.key contains the key that was pressed to trigger the key press function. You will need to listen for 26 different keys (use a loop to shorten this code!)
