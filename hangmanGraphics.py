@@ -29,7 +29,7 @@ def printHangman(incguesses): #Should take one argument, the number of incorrect
 def keyPress(event): #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letterers that have been guessed.
     guessed = ''
     if event.key not in guessed:
-        guessed += event.key
+        guessed = event.key
     guessedbank = TextAsset(guessed,fill=green,style='bold 40pt Times')
     Sprite(guessedbank, (300,100))
 
