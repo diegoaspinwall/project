@@ -30,7 +30,7 @@ def keyPress(event): #Should take one argument, event. The function should fill 
     if event.key not in data['guessed']:
         data['guessed'] += event.key+' '
     guessedbank = TextAsset(data['guessed'],fill=black,style='bold 30pt Times')
-    Sprite(guessedbank, (400,50))
+    Sprite(guessedbank, (450,0))
     
     if event.key in word and event.key not in data['guessed']:
         print(event.key)
