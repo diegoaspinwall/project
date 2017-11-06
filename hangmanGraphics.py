@@ -19,10 +19,18 @@ def pickWord(): #Should take no arguments. The function should choose a random w
         return 'programming'
     if rword == 6:
         return 'boolean'
-"""    
-def wordComplete(): #Should take no arguments. The function should return True if all the letters in the word have been guessed and False otherwise.
-    
 
+def wordComplete(): #Should take no arguments. The function should return True if all the letters in the word have been guessed and False otherwise.
+    for ch in data['guessed']:
+        corguesses = 0
+        if ch in word:
+            corguesses+=1
+        if corguesses == len(word):
+            return True
+        else:
+            return False
+
+'''
 def printHangman(incguesses): #Should take one argument, the number of incorrect guesses. The function should print out a new part of the body based on how many wrong guesses have occurred.
     
 """
@@ -71,6 +79,3 @@ if __name__ == '__main__':
     for ch in 'abcdefghijklmnopqrstuvwxyz':
         App().listenKeyEvent('keydown',ch,keyPress)
     App().run()
-
-#Useful detail - event.key contains the key that was pressed to trigger the key press function. You will need to listen for 26 different keys (use a loop to shorten this code!)
-
