@@ -32,11 +32,12 @@ def keyPress(event): #Should take one argument, event. The function should fill 
     guessedbank = TextAsset(data['guessed'],fill=black,style='bold 30pt Times')
     Sprite(guessedbank, (500,25))
     
-    if event.key in word and event.key not in data['guessed']:
-        print(event.key)
-        
-            #spot = 
-            #Sprite(TextAsset(event.key,fill=black,style='bold 30pt Times'), ((60)*spot),500))
+    if event.key in word:
+        place = 0
+        for ch in word:
+            place +=1
+            if ch == event.key:
+                Sprite(TextAsset(event.key,fill=black,style='bold 30pt Times'), ((60)*place),500))
 
 
 if __name__ == '__main__':
