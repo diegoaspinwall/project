@@ -37,7 +37,7 @@ def keyPress(event): #Should take one argument, event. The function should fill 
         for ch in word:
             place +=1
             if ch == event.key:
-                Sprite(TextAsset(event.key,fill=black,style='bold 30pt Times'), ((60)*place),500))
+                Sprite(TextAsset(event.key,fill=black,style='bold 30pt Times'), (((60)*place),500))
 
 
 if __name__ == '__main__':
