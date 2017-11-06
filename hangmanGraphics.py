@@ -33,7 +33,7 @@ def wordComplete(): #Should take no arguments. The function should return True i
 '''
 def printHangman(incguesses): #Should take one argument, the number of incorrect guesses. The function should print out a new part of the body based on how many wrong guesses have occurred.
     
-"""
+'''
 def keyPress(event): #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letterers that have been guessed.
     if event.key not in data['guessed']:
         data['guessed'] += event.key+' '
