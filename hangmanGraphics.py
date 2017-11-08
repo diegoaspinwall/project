@@ -44,7 +44,7 @@ def printHangman(incguesses): #Should take one argument, the number of incorrect
     if incguesses==6:
         Sprite(leg2, (200,200))
 
-def keyPress(event): #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letterers that have been guessed.
+def keyPress(event): #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letters that have been guessed.
     if event.key not in data['guessed']:
         data['guessed'] += event.key+' '
     guessedbank = TextAsset(data['guessed'],fill=black,style='bold 30pt Times')
@@ -84,6 +84,9 @@ if __name__ == '__main__':
     leg = LineAsset(-20,40,blackline)
     leg2 = LineAsset(20,40,blackline)
     
+    if wordComplete() == True:
+        print('You win!')
+    
     for i in range(0,len(word)):
         Sprite(underline, (((60)*i),500))
     
@@ -91,12 +94,12 @@ if __name__ == '__main__':
     Sprite(beamup, (50,25))
     Sprite(beamright, (50,0))
     Sprite(deathrope, (200,50))
-    Sprite(arm, (200,150))
+    '''Sprite(arm, (200,150))
     Sprite(arm2, (200,150))
     Sprite(head, (200,100))
     Sprite(torso, (200,150))
     Sprite(leg, (200,200))
-    Sprite(leg2, (200,200))
+    Sprite(leg2, (200,200))'''
     
     for ch in 'abcdefghijklmnopqrstuvwxyz':
         App().listenKeyEvent('keydown',ch,keyPress)
