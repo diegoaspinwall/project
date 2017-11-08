@@ -71,7 +71,7 @@ if __name__ == '__main__':
     arm = LineAsset(20,40,blackline)
     arm2 = LineAsset(-20,40,blackline)
     head = EllipseAsset(30,40,blackline,white)
-    torso = LineAsset(0,30,blackline)
+    torso = LineAsset(0,50,blackline)
     leg = LineAsset(-20,40,blackline)
     leg2 = LineAsset(20,40,blackline)
     
@@ -86,8 +86,8 @@ if __name__ == '__main__':
     Sprite(arm2, (200,150))
     Sprite(head, (200,100))
     Sprite(torso, (200,150))
-    Sprite(leg, (200,180))
-    Sprite(leg2, (200,180))
+    Sprite(leg, (200,200))
+    Sprite(leg2, (200,200))
     
     for ch in 'abcdefghijklmnopqrstuvwxyz':
         App().listenKeyEvent('keydown',ch,keyPress)
