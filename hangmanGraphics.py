@@ -21,7 +21,6 @@ def pickWord(): #Should take no arguments. The function should choose a random w
         return 'boolean'
 
 def wordComplete(): #Should take no arguments. The function should return True if all the letters in the word have been guessed and False otherwise.
-    corguesses = 0
     for ch in word:
         if ch not in data['guessed']:
             return True 
