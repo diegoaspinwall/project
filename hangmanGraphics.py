@@ -32,7 +32,8 @@ def wordComplete(): #Should take no arguments. The function should return True i
 
 '''
 def printHangman(incguesses): #Should take one argument, the number of incorrect guesses. The function should print out a new part of the body based on how many wrong guesses have occurred.
-    
+    if incguesses==1:
+        
 '''
 def keyPress(event): #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letterers that have been guessed.
     if event.key not in data['guessed']:
@@ -67,6 +68,12 @@ if __name__ == '__main__':
     beamright = RectangleAsset(200,50,blackline, white)
     deathrope = LineAsset(0,40,blackline)
     underline = LineAsset(40,0,blackline)
+    arm = LineAsset(20,40,blackline)
+    arm2 = LineAsset(-20,40,blackline)
+    head = EllipseAsset(30,40,blackline,white)
+    torso = LineAsset(0,30,blackline)
+    leg = LineAsset(-20,40,blackline)
+    leg2 = LineAsset(20,40,blackline)
     
     for i in range(0,len(word)):
         Sprite(underline, (((60)*i),500))
@@ -75,6 +82,12 @@ if __name__ == '__main__':
     Sprite(beamup, (50,25))
     Sprite(beamright, (50,0))
     Sprite(deathrope, (200,50))
+    Sprite(arm)
+    Sprite(arm2)
+    Sprite(head)
+    Sprite(torso)
+    Sprite(leg)
+    Sprite(leg2)
     
     for ch in 'abcdefghijklmnopqrstuvwxyz':
         App().listenKeyEvent('keydown',ch,keyPress)
