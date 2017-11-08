@@ -22,13 +22,11 @@ def pickWord(): #Should take no arguments. The function should choose a random w
 
 def wordComplete(): #Should take no arguments. The function should return True if all the letters in the word have been guessed and False otherwise.
     corguesses = 0
-    for ch in data['guessed']:
-        if ch in word:
-            corguesses+=1
-    if corguesses == len(word):
-        return True
-    else:
-        return False
+    for ch in word:
+        if ch not in data['guessed']:
+            return True 
+        else:
+            return False
 
 def printHangman(incguesses): #Should take one argument, the number of incorrect guesses. The function should print out a new part of the body based on how many wrong guesses have occurred.
     if incguesses==1:
