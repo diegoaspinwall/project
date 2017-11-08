@@ -82,12 +82,12 @@ if __name__ == '__main__':
     Sprite(beamup, (50,25))
     Sprite(beamright, (50,0))
     Sprite(deathrope, (200,50))
-    Sprite(arm)
-    Sprite(arm2)
-    Sprite(head)
-    Sprite(torso)
-    Sprite(leg)
-    Sprite(leg2)
+    Sprite(arm, (200,100))
+    Sprite(arm2, (200,100))
+    Sprite(head, (200,100))
+    Sprite(torso, (200,150))
+    Sprite(leg, (200,180))
+    Sprite(leg2, (200,180))
     
     for ch in 'abcdefghijklmnopqrstuvwxyz':
         App().listenKeyEvent('keydown',ch,keyPress)
