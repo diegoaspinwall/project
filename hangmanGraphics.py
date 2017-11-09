@@ -81,8 +81,10 @@ if __name__ == '__main__':
     leg = LineAsset(-20,40,blackline)
     leg2 = LineAsset(20,40,blackline)
     
-    if wordComplete() == True:
-        print('You win!')
+    while True:
+        if wordComplete() == True:
+            print('You win!')
+            break
     
     for i in range(0,len(word)):
         Sprite(underline, (((60)*i),500))
