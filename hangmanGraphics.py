@@ -50,6 +50,10 @@ def printHangman(incguesses): #Should take one argument, the number of incorrect
         Sprite(leg2, (200,200))
 
 def keyPress(event): #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letters that have been guessed.
+    if event.key not in data['guessed'] and event.key not in data['word']:
+        data['incguesses'] += 1
+        printHangman(data['incguesses'])
+    
     if event.key not in data['guessed']:
         data['guessed'] += event.key+' '
     guessedbank = TextAsset(data['guessed'],fill=black,style='bold 30pt Times')
@@ -61,10 +65,7 @@ def keyPress(event): #Should take one argument, event. The function should fill 
             place +=1
             if ch == event.key:
                 Sprite(TextAsset(event.key,fill=black,style='bold 30pt Times'), (((60)*place-50),450))
-                
-    if event.key not in data['guessed'] and event.key not in data['word']:
-        data['incguesses'] += 1
-        printHangman(data['incguesses'])
+    
 
 
 if __name__ == '__main__':
