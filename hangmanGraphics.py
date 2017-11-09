@@ -23,7 +23,7 @@ def pickWord(): #Should take no arguments. The function should choose a random w
 def wordComplete(): #Should take no arguments. The function should return True if all the letters in the word have been guessed and False otherwise.
     compcount = 0
     for ch in word:
-        if ch in event.key:
+        if ch in data['guessed']:
             compcount += 1
     if compcount == len(word):
         return True
