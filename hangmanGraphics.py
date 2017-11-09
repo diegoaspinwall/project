@@ -23,9 +23,9 @@ def pickWord(): #Should take no arguments. The function should choose a random w
 def wordComplete(): #Should take no arguments. The function should return True if all the letters in the word have been guessed and False otherwise.
     for ch in word:
         if ch not in data['guessed']:
-            return True 
+            print('hi') 
         else:
-            return False
+            print('bye')
 
 def printHangman(incguesses): #Should take one argument, the number of incorrect guesses. The function should print out a new part of the body based on how many wrong guesses have occurred.
     if incguesses==1:
