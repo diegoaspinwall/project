@@ -29,17 +29,23 @@ def wordComplete(): #Should take no arguments. The function should return True i
             break
 
 def printHangman(incguesses): #Should take one argument, the number of incorrect guesses. The function should print out a new part of the body based on how many wrong guesses have occurred.
-    if data['incguesses']==1:
+    arm = LineAsset(20,40,blackline)
+    arm2 = LineAsset(-20,40,blackline)
+    head = EllipseAsset(30,40,blackline,white)
+    torso = LineAsset(0,50,blackline)
+    leg = LineAsset(-20,40,blackline)
+    leg2 = LineAsset(20,40,blackline)
+    if incguesses==1:
         Sprite(head, (200,100))
-    if data['incguesses']==2:
+    if incguesses==2:
         Sprite(arm2, (200,150))
-    if data['incguesses']==3:
+    if incguesses==3:
         Sprite(arm, (200,150))
-    if data['incguesses']==4:
+    if incguesses==4:
         Sprite(torso, (200,150))
-    if data['incguesses']==5:
+    if incguesses==5:
         Sprite(leg, (200,200))
-    if data['incguesses']==6:
+    if incguesses==6:
         Sprite(leg2, (200,200))
 
 def keyPress(event): #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letters that have been guessed.
@@ -54,7 +60,7 @@ def keyPress(event): #Should take one argument, event. The function should fill 
             place +=1
             if ch == event.key:
                 Sprite(TextAsset(event.key,fill=black,style='bold 30pt Times'), (((60)*place-50),450))
-    
+                
     if event.key not in data['guessed'] and event.key not in word:
         data['incguesses'] += 1
 
@@ -79,12 +85,6 @@ if __name__ == '__main__':
     beamright = RectangleAsset(200,50,blackline, white)
     deathrope = LineAsset(0,40,blackline)
     underline = LineAsset(40,0,blackline)
-    arm = LineAsset(20,40,blackline)
-    arm2 = LineAsset(-20,40,blackline)
-    head = EllipseAsset(30,40,blackline,white)
-    torso = LineAsset(0,50,blackline)
-    leg = LineAsset(-20,40,blackline)
-    leg2 = LineAsset(20,40,blackline)
     
     if wordComplete() == True:
         print('You win!')
