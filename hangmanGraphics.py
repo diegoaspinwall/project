@@ -29,17 +29,17 @@ def wordComplete(): #Should take no arguments. The function should return True i
             break
 
 def printHangman(incguesses): #Should take one argument, the number of incorrect guesses. The function should print out a new part of the body based on how many wrong guesses have occurred.
-    if incguesses==1:
+    if data['incguesses']==1:
         Sprite(head, (200,100))
-    if incguesses==2:
+    if data['incguesses']==2:
         Sprite(arm2, (200,150))
-    if incguesses==3:
+    if data['incguesses']==3:
         Sprite(arm, (200,150))
-    if incguesses==4:
+    if data['incguesses']==4:
         Sprite(torso, (200,150))
-    if incguesses==5:
+    if data['incguesses']==5:
         Sprite(leg, (200,200))
-    if incguesses==6:
+    if data['incguesses']==6:
         Sprite(leg2, (200,200))
 
 def keyPress(event): #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letters that have been guessed.
