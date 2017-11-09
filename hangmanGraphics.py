@@ -25,7 +25,7 @@ def wordComplete(): #Should take no arguments. The function should return True i
     for ch in word:
         if ch in event.key:
             compcount += 1
-    if compcount = len(word):
+    if compcount == len(word):
         return True
 
 def printHangman(incguesses): #Should take one argument, the number of incorrect guesses. The function should print out a new part of the body based on how many wrong guesses have occurred.
