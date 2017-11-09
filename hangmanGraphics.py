@@ -88,6 +88,10 @@ if __name__ == '__main__':
     for i in range(0,len(word)):
         Sprite(underline, (((60)*i),500))
     
+    incguesses = 0
+    if 
+    printHangman(incguesses)
+    
     Sprite(floor, (50,300))
     Sprite(beamup, (50,25))
     Sprite(beamright, (50,0))
