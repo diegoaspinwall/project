@@ -22,7 +22,7 @@ def pickWord(): #Should take no arguments. The function should choose a random w
 
 def wordComplete(): #Should take no arguments. The function should return True if all the letters in the word have been guessed and False otherwise.
     for ch in word:
-        if ch not in data['guessed']:
+        if ch in data['guessed']:
             return True
         else:
             return False
