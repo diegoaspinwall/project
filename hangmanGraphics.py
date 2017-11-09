@@ -53,18 +53,23 @@ def keyPress(event): #Should take one argument, event. The function should fill 
         data['incguesses'] += 1
         printHangman(data['incguesses'])
     
+    if wordComplete() == True:
+        print('You win!')
+    
+    #
     if event.key not in data['guessed']:
         data['guessed'] += event.key+' '
     guessedbank = TextAsset(data['guessed'],fill=black,style='bold 30pt Times')
     Sprite(guessedbank, (500,25))
     
+    #displays letter in word that user correctly gets
     if event.key in data['word']:
         place = 0
         for ch in data['word']:
             place +=1
             if ch == event.key:
                 Sprite(TextAsset(event.key,fill=black,style='bold 30pt Times'), (((60)*place-50),450))
-    
+
 
 
 if __name__ == '__main__':
