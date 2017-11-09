@@ -55,9 +55,9 @@ def keyPress(event): #Should take one argument, event. The function should fill 
     guessedbank = TextAsset(data['guessed'],fill=black,style='bold 30pt Times')
     Sprite(guessedbank, (500,25))
     
-    if event.key in word:
+    if event.key in data['word']:
         place = 0
-        for ch in word:
+        for ch in data['word']:
             place +=1
             if ch == event.key:
                 Sprite(TextAsset(event.key,fill=black,style='bold 30pt Times'), (((60)*place-50),450))
