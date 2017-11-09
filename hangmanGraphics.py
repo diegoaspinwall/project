@@ -89,7 +89,8 @@ if __name__ == '__main__':
         Sprite(underline, (((60)*i),500))
     
     incguesses = 0
-    if 
+    if event.key not in data['guessed']:
+        incguesses += 1
     printHangman(incguesses)
     
     Sprite(floor, (50,300))
