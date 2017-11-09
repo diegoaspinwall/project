@@ -54,12 +54,16 @@ def keyPress(event): #Should take one argument, event. The function should fill 
             place +=1
             if ch == event.key:
                 Sprite(TextAsset(event.key,fill=black,style='bold 30pt Times'), (((60)*place-50),450))
+    
+    if event.key not in data['guessed']:
+        incguesses += 1
 
 
 if __name__ == '__main__':
     
     data = {}
     data['guessed'] = ''
+    data['incguesses'] = 0
     
     word = pickWord()
     
@@ -88,9 +92,6 @@ if __name__ == '__main__':
     for i in range(0,len(word)):
         Sprite(underline, (((60)*i),500))
     
-    incguesses = 0
-    if event.key not in data['guessed']:
-        incguesses += 1
     printHangman(incguesses)
     
     Sprite(floor, (50,300))
