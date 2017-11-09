@@ -97,12 +97,6 @@ if __name__ == '__main__':
     Sprite(beamup, (50,25))
     Sprite(beamright, (50,0))
     Sprite(deathrope, (200,50))
-    '''Sprite(arm, (200,150))
-    Sprite(arm2, (200,150))
-    Sprite(head, (200,100))
-    Sprite(torso, (200,150))
-    Sprite(leg, (200,200))
-    Sprite(leg2, (200,200))'''
     
     for ch in 'abcdefghijklmnopqrstuvwxyz':
         App().listenKeyEvent('keydown',ch,keyPress)
