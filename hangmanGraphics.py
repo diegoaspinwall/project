@@ -55,7 +55,7 @@ def keyPress(event): #Should take one argument, event. The function should fill 
             if ch == event.key:
                 Sprite(TextAsset(event.key,fill=black,style='bold 30pt Times'), (((60)*place-50),450))
     
-    if event.key not in data['guessed'] and not in word:
+    if event.key not in data['guessed'] and event.key not in word:
         data['incguesses'] += 1
 
 
