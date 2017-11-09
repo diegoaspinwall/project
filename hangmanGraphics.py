@@ -29,7 +29,6 @@ def wordComplete(): #Should take no arguments. The function should return True i
             break
 
 def printHangman(incguesses): #Should take one argument, the number of incorrect guesses. The function should print out a new part of the body based on how many wrong guesses have occurred.
-    print(incguesses)
     arm = LineAsset(20,40,blackline)
     arm2 = LineAsset(-20,40,blackline)
     head = EllipseAsset(30,40,blackline,white)
