@@ -21,7 +21,7 @@ def pickWord(): #Should take no arguments. The function should choose a random w
         return 'boolean'
 
 def wordComplete(): #Should take no arguments. The function should return True if all the letters in the word have been guessed and False otherwise.
-    for ch in word:
+    for ch in data['word']:
         if ch in data['guessed']:
             return True
         else:
@@ -62,7 +62,7 @@ def keyPress(event): #Should take one argument, event. The function should fill 
             if ch == event.key:
                 Sprite(TextAsset(event.key,fill=black,style='bold 30pt Times'), (((60)*place-50),450))
                 
-    if event.key not in data['guessed'] and event.key not in word:
+    if event.key not in data['guessed'] and event.key not in data['word']:
         data['incguesses'] += 1
         printHangman(data['incguesses'])
 
@@ -72,8 +72,7 @@ if __name__ == '__main__':
     data = {}
     data['guessed'] = ''
     data['incguesses'] = 0
-    
-    word = pickWord()
+    data['word'] = pickWord()
     
     black = Color(0x000000,1)
     green = Color(0x00ff00,1)
