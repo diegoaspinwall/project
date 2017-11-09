@@ -90,7 +90,7 @@ if __name__ == '__main__':
     if wordComplete() == True:
         print('You win!')
     
-    for i in range(0,len(word)):
+    for i in range(0,len(data['word'])):
         Sprite(underline, (((60)*i),500))
     
     Sprite(floor, (50,300))
