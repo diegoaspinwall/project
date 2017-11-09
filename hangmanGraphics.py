@@ -92,7 +92,7 @@ if __name__ == '__main__':
     for i in range(0,len(word)):
         Sprite(underline, (((60)*i),500))
     
-    printHangman(incguesses)
+    printHangman(data['incguesses'])
     
     Sprite(floor, (50,300))
     Sprite(beamup, (50,25))
