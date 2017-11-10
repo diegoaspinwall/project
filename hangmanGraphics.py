@@ -30,11 +30,11 @@ mouth = LineAsset(25,0,blackline)
 
 #moves the hangman into place
 def moveObject(object, objectystop):
-    data['directiony'] = 1
+    data['directiony'] = 10
     object.y += data['directiony']
     
-    if object.y < objectystop:
-        data['directiony'] = -1*data['directiony']
+    if object.y == objectystop:
+        data['directiony'] = 0
 
 
 #Should take no arguments. The function should choose a random word.
@@ -145,4 +145,4 @@ if __name__ == '__main__':
         #listens for keys
         for ch in 'abcdefghijklmnopqrstuvwxyz':
             App().listenKeyEvent('keydown',ch,keyPress)
-        App().run()
+        App().run('''moveObject''')
