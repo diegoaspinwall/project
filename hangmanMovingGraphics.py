@@ -56,10 +56,11 @@ mouthstop = 120
 #moves the hangman into place
 def moveObject(object, objectystop):
     data['directiony'] = 1
+    data['frames'] = 0
     while object.y < objectystop:
-        data['frames'] = 0
         if data['frames'] == 2:
             object.y += data['directiony']
+            data['frames'] = 0
 
 def step():
     data['frames'] += 1
