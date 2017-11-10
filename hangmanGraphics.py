@@ -5,7 +5,8 @@
 from random import randint
 from ggame import *
 
-def pickWord(): #Should take no arguments. The function should choose a random word.
+#Should take no arguments. The function should choose a random word.
+def pickWord():
     rword = randint(1,6)
     if rword == 1:
         return 'computer'
@@ -32,7 +33,8 @@ def wordComplete():
             return False'''
     print(len(data['word']))
 
-def printHangman(incguesses): #Should take one argument, the number of incorrect guesses. The function should print out a new part of the body based on how many wrong guesses have occurred.
+#Should take one argument, the number of incorrect guesses. The function should print out a new part of the body based on how many wrong guesses have occurred.
+def printHangman(incguesses):
     arm = LineAsset(20,40,blackline)
     arm2 = LineAsset(-20,40,blackline)
     head = EllipseAsset(30,40,blackline,white)
@@ -52,7 +54,8 @@ def printHangman(incguesses): #Should take one argument, the number of incorrect
     if incguesses==6:
         Sprite(leg2, (200,200))
 
-def keyPress(event): #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letters that have been guessed.
+#Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letters that have been guessed.
+def keyPress(event):
     #records the incorrect guesses in incguesses after every keyPress and displays the printHangman
     if event.key not in data['guessed'] and event.key not in data['word']:
         data['incguesses'] += 1
@@ -79,7 +82,7 @@ def keyPress(event): #Should take one argument, event. The function should fill 
                 Sprite(TextAsset(event.key,fill=black,style='bold 30pt Times'), (((60)*place-50),450))
 
 
-
+#runs game
 if __name__ == '__main__':
     
     #dictionaries
