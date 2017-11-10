@@ -23,7 +23,7 @@ def pickWord():
 
 #Should take no arguments. The function should return True if all the letters in the word have been guessed and False otherwise.
 def wordComplete():
-    letters = 0
+    letters = 1
     for ch in data['word']:
         if ch in data['guessed']:
             letters += 1
