@@ -28,17 +28,17 @@ eyep = LineAsset(10,10,blackline)
 eyep2 = LineAsset(-10,10,blackline)
 mouthp = LineAsset(25,0,blackline)
 
-head = Sprite(headp, (200,100))
-arm2 = Sprite(armp2, (200,150))
-arm = Sprite(armp, (200,150))
-torso = Sprite(torsop, (200,150))
-leg = Sprite(legp, (200,200))
-leg2 = Sprite(legp2, (200,200))
-eye1 = Sprite(eyep, (185,85))
-eye2 = Sprite(eyep2, (195,85))
-eye3 = Sprite(eyep, (205,85))
-eye4 = Sprite(eyep2, (215,85))
-mouth = Sprite(mouthp, (188,120))
+head = Sprite(headp, (200,0))
+arm2 = Sprite(armp2, (200,0))
+arm = Sprite(armp, (200,0))
+torso = Sprite(torsop, (200,0))
+leg = Sprite(legp, (200,0))
+leg2 = Sprite(legp2, (200,0))
+eye1 = Sprite(eyep, (185,0))
+eye2 = Sprite(eyep2, (195,0))
+eye3 = Sprite(eyep, (205,0))
+eye4 = Sprite(eyep2, (215,0))
+mouth = Sprite(mouthp, (188,0))
 
 headstop = 100
 arm2stop = 150
@@ -170,4 +170,4 @@ if __name__ == '__main__':
         #listens for keys
         for ch in 'abcdefghijklmnopqrstuvwxyz':
             App().listenKeyEvent('keydown',ch,keyPress)
-        App().run(moveObject)
+        App().run(printHangman)
