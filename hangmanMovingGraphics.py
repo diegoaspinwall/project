@@ -58,11 +58,11 @@ def moveObject(object, objectystop):
     data['directiony'] = 1
     while object.y < objectystop:
         framesincrease = data['frames']
-        data['frames'] += 1
-        if data['frames'] - framesincrease == 20:
+        if data['frames'] - framesincrease == 2:
             object.y += data['directiony']
 
-
+def step():
+    data['frames'] += 1
 
 #Should take no arguments. The function should choose a random word.
 def pickWord():
@@ -173,4 +173,4 @@ if __name__ == '__main__':
         #listens for keys
         for ch in 'abcdefghijklmnopqrstuvwxyz':
             App().listenKeyEvent('keydown',ch,keyPress)
-        App().run()
+        App().run(step)
