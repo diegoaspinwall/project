@@ -40,8 +40,8 @@ def printHangman(incguesses):
     torso = LineAsset(0,50,blackline)
     leg = LineAsset(-20,40,blackline)
     leg2 = LineAsset(20,40,blackline)
-    eye = LineAsset(5,5,blackline)
-    eye2 = LineAsset(-5,5,blackline)
+    eye = LineAsset(10,10,blackline)
+    eye2 = LineAsset(-10,10,blackline)
     if incguesses==1:
         Sprite(head, (200,100))
     if incguesses==2:
@@ -54,8 +54,8 @@ def printHangman(incguesses):
         Sprite(leg, (200,200))
     if incguesses==6:
         Sprite(leg2, (200,200))
-        Sprite(eye, (187.5,85))
-        Sprite(eye2, (192.5,85))
+        Sprite(eye, (185,85))
+        Sprite(eye2, (195,85))
         Sprite(eye, (210,85))
         Sprite(eye2, (210,85))
         data['endgame'] += 1
