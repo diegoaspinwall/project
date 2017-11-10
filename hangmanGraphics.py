@@ -62,15 +62,15 @@ def keyPress(event):
     
     #checks for wordComplete every keyPress
     if wordComplete() == True:
-        print('You win!')
+        Sprite(TextAsset('You Win!',fill=black,style='bold 30pt Times'), (300,500))
     
-    #displays the guessedbank
+    #displays the guessedbank with every keyPress
     if event.key not in data['guessed']:
         data['guessed'] += event.key+' '
     guessedbank = TextAsset(data['guessed'],fill=black,style='bold 30pt Times')
     Sprite(guessedbank, (500,25))
     
-    #displays letter in word that user correctly gets
+    #displays letter in below that user correctly gets
     if event.key in data['word']:
         place = 0
         for ch in data['word']:
