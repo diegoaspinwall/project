@@ -57,7 +57,9 @@ mouthstop = 120
 def moveObject(object, objectystop):
     data['directiony'] = 1
     while object.y < objectystop:
-        object.y += data['directiony']
+        framesincrease = data['frames']
+        if data['frames'] - framesincrease == 20:
+            object.y += data['directiony']
 
 
 
@@ -155,6 +157,7 @@ if __name__ == '__main__':
     data['word'] = pickWord()
     data['endgame'] = 0
     data['directiony'] = 1
+    data['frames'] = 0
 
     #sprites things that are always there
     Sprite(floor, (50,300))
