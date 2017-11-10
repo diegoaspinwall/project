@@ -28,17 +28,17 @@ eyep = LineAsset(10,10,blackline)
 eyep2 = LineAsset(-10,10,blackline)
 mouthp = LineAsset(25,0,blackline)
 
-head = Sprite(headp, (200,100))
-arm2 = Sprite(armp2, (200,100))
-arm = Sprite(armp, (200,100))
-torso = Sprite(torsop, (200,100))
-leg = Sprite(legp, (200,100))
-leg2 = Sprite(legp2, (200,100))
-eye1 = Sprite(eyep, (185,100))
-eye2 = Sprite(eyep2, (195,100))
-eye3 = Sprite(eyep, (205,100))
-eye4 = Sprite(eyep2, (215,100))
-mouth = Sprite(mouthp, (188,100))
+head = Sprite(headp, (200,10))
+arm2 = Sprite(armp2, (200,10))
+arm = Sprite(armp, (200,10))
+torso = Sprite(torsop, (200,10))
+leg = Sprite(legp, (200,10))
+leg2 = Sprite(legp2, (200,10))
+eye1 = Sprite(eyep, (185,10))
+eye2 = Sprite(eyep2, (195,10))
+eye3 = Sprite(eyep, (205,10))
+eye4 = Sprite(eyep2, (215,10))
+mouth = Sprite(mouthp, (188,10))
 
 headstop = 100
 arm2stop = 150
@@ -55,7 +55,7 @@ mouthstop = 120
 
 #moves the hangman into place
 def moveObject(object, objectystop):
-    data['directiony'] = 10
+    data['directiony'] = 1
     while object.y < objectystop:
         object.y += data['directiony']
 
