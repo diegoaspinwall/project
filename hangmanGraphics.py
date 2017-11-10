@@ -10,7 +10,6 @@ black = Color(0x000000,1)
 green = Color(0x00ff00,1)
 red = Color(0xff0000,1)
 white = Color(0xffffff,1)
-    
 blackline = LineStyle(4,black)
     
 #names things that are always there
