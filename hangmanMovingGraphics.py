@@ -107,7 +107,7 @@ def printHangman(incguesses):
         moveObject(eye2, eye2stop)
         moveObject(eye3, eye3stop)
         moveObject(eye4, eye4stop)
-        moveObject(head, headstop)
+        moveObject(mouth, mouthstop)
         data['endgame'] += 1
 
 #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letters that have been guessed.
@@ -171,4 +171,3 @@ if __name__ == '__main__':
         for ch in 'abcdefghijklmnopqrstuvwxyz':
             App().listenKeyEvent('keydown',ch,keyPress)
         App().run()
-        '''moveObject'''
