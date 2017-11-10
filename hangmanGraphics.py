@@ -40,6 +40,8 @@ def printHangman(incguesses):
     torso = LineAsset(0,50,blackline)
     leg = LineAsset(-20,40,blackline)
     leg2 = LineAsset(20,40,blackline)
+    eye = LineAsset(5,5,blackline)
+    eye2 = LineAsset(-5,5,blackline)
     if incguesses==1:
         Sprite(head, (200,100))
     if incguesses==2:
