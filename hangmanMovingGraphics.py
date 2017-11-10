@@ -70,22 +70,22 @@ def wordComplete():
 #Should take one argument, the number of incorrect guesses. The function should print out a new part of the body based on how many wrong guesses have occurred.
 def printHangman(incguesses):
     if incguesses==1:
-        Sprite(head, (200,100))
+        head = Sprite(headp, (200,100))
     if incguesses==2:
-        Sprite(arm2, (200,150))
+        arm2 = Sprite(armp2, (200,150))
     if incguesses==3:
-        Sprite(arm, (200,150))
+        arm = Sprite(armp, (200,150))
     if incguesses==4:
-        Sprite(torso, (200,150))
+        torso = Sprite(torsop, (200,150))
     if incguesses==5:
-        Sprite(leg, (200,200))
+        leg = Sprite(legp, (200,200))
     if incguesses==6:
-        Sprite(leg2, (200,200))
-        Sprite(eye, (185,85))
-        Sprite(eye2, (195,85))
-        Sprite(eye, (205,85))
-        Sprite(eye2, (215,85))
-        Sprite(mouth, (188,120))
+        leg2 = Sprite(legp2, (200,200))
+        eye = Sprite(eyep, (185,85))
+        eye = Sprite(eyep2, (195,85))
+        eye = Sprite(eyep, (205,85))
+        eye = Sprite(eyep2, (215,85))
+        mouth = Sprite(mouthp, (188,120))
         data['endgame'] += 1
 
 #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letters that have been guessed.
@@ -150,4 +150,3 @@ if __name__ == '__main__':
             App().listenKeyEvent('keydown',ch,keyPress)
         App().run()
         '''moveObject'''
-
