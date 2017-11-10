@@ -4,7 +4,7 @@
 
 from random import randint
 from ggame import *
-
+'''
 #colors and line color
 black = Color(0x000000,1)
 green = Color(0x00ff00,1)
@@ -27,7 +27,7 @@ leg = LineAsset(-20,40,blackline)
 leg2 = LineAsset(20,40,blackline)
 eye = LineAsset(10,10,blackline)
 eye2 = LineAsset(-10,10,blackline)
-mouth = LineAsset(25,0,blackline)
+mouth = LineAsset(25,0,blackline)'''
 
 #Should take no arguments. The function should choose a random word.
 def pickWord():
@@ -58,6 +58,15 @@ def wordComplete():
 
 #Should take one argument, the number of incorrect guesses. The function should print out a new part of the body based on how many wrong guesses have occurred.
 def printHangman(incguesses):
+    arm = LineAsset(20,40,blackline)
+    arm2 = LineAsset(-20,40,blackline)
+    head = EllipseAsset(30,40,blackline,white)
+    torso = LineAsset(0,50,blackline)
+    leg = LineAsset(-20,40,blackline)
+    leg2 = LineAsset(20,40,blackline)
+    eye = LineAsset(10,10,blackline)
+    eye2 = LineAsset(-10,10,blackline)
+    mouth = LineAsset(25,0,blackline)
     if incguesses==1:
         Sprite(head, (200,100))
     if incguesses==2:
@@ -121,6 +130,21 @@ if __name__ == '__main__':
     data['incguesses'] = 0
     data['word'] = pickWord()
     data['endgame'] = 0
+    
+    #colors and line color
+    black = Color(0x000000,1)
+    green = Color(0x00ff00,1)
+    red = Color(0xff0000,1)
+    white = Color(0xffffff,1)
+        
+    blackline = LineStyle(4,black)
+        
+    #names things that are always there
+    floor = RectangleAsset(300,100,blackline, white)
+    beamup = RectangleAsset(50,275,blackline, white)
+    beamright = RectangleAsset(200,50,blackline, white)
+    deathrope = LineAsset(0,40,blackline)
+    underline = LineAsset(40,0,blackline)
     
     #sprites the underlines, each word has different number
     for i in range(0,len(data['word'])):
