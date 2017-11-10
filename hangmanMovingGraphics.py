@@ -28,7 +28,29 @@ eyep = LineAsset(10,10,blackline)
 eyep2 = LineAsset(-10,10,blackline)
 mouthp = LineAsset(25,0,blackline)
 
+head = Sprite(headp, (200,100))
+arm2 = Sprite(armp2, (200,150))
+arm = Sprite(armp, (200,150))
+torso = Sprite(torsop, (200,150))
+leg = Sprite(legp, (200,200))
+leg2 = Sprite(legp2, (200,200))
+eye1 = Sprite(eyep, (185,85))
+eye2 = Sprite(eyep2, (195,85))
+eye3 = Sprite(eyep, (205,85))
+eye4 = Sprite(eyep2, (215,85))
+mouth = Sprite(mouthp, (188,120))
 
+headstop = 100
+arm2stop = 150
+armstop = 150
+torsostop = 150
+legstop = 200
+leg2stop = 200
+eye1stop = 85
+eye2stop = 85
+eye3stop = 85
+eye4stop = 85
+mouthstop = 120
 
 
 #moves the hangman into place
@@ -70,22 +92,22 @@ def wordComplete():
 #Should take one argument, the number of incorrect guesses. The function should print out a new part of the body based on how many wrong guesses have occurred.
 def printHangman(incguesses):
     if incguesses==1:
-        head = Sprite(headp, (200,100))
+        moveObject(head, headstop)
     if incguesses==2:
-        arm2 = Sprite(armp2, (200,150))
+        moveObject(arm2, arm2stop)
     if incguesses==3:
-        arm = Sprite(armp, (200,150))
+        moveObject(arm, arm2stop)
     if incguesses==4:
-        torso = Sprite(torsop, (200,150))
+        moveObject(torso, torsostop)
     if incguesses==5:
-        leg = Sprite(legp, (200,200))
+        moveObject(leg, legstop)
     if incguesses==6:
-        leg2 = Sprite(legp2, (200,200))
-        eye1 = Sprite(eyep, (185,85))
-        eye2 = Sprite(eyep2, (195,85))
-        eye3 = Sprite(eyep, (205,85))
-        eye4 = Sprite(eyep2, (215,85))
-        mouth = Sprite(mouthp, (188,120))
+        moveObject(leg2, leg2stop)
+        moveObject(eye1, eye1stop)
+        moveObject(eye2, eye2stop)
+        moveObject(eye3, eye3stop)
+        moveObject(eye4, eye4stop)
+        moveObject(head, headstop)
         data['endgame'] += 1
 
 #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letters that have been guessed.
