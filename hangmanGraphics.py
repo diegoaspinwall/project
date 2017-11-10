@@ -123,16 +123,15 @@ if __name__ == '__main__':
     data['word'] = pickWord()
     data['endgame'] = 0
 
+    #sprites things that are always there
+    Sprite(floor, (50,300))
+    Sprite(beamup, (50,25))
+    Sprite(beamright, (50,0))
+    Sprite(deathrope, (200,50))    
     
     #sprites the underlines, each word has different number
     for i in range(0,len(data['word'])):
         Sprite(underline, (((60)*i),500))
-    
-        #sprites things that are always there
-        Sprite(floor, (50,300))
-        Sprite(beamup, (50,25))
-        Sprite(beamright, (50,0))
-        Sprite(deathrope, (200,50))
             
         #listens for keys
         for ch in 'abcdefghijklmnopqrstuvwxyz':
