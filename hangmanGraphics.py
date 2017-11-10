@@ -83,7 +83,7 @@ def keyPress(event):
 #runs game
 if __name__ == '__main__':
     
-    while endgame == 0:
+    while data['endgame'] == 0:
     
         #dictionaries
         data = {}
