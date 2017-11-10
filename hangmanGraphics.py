@@ -49,7 +49,7 @@ def printHangman(incguesses): #Should take one argument, the number of incorrect
         Sprite(leg2, (200,200))
 
 def keyPress(event): #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letters that have been guessed.
-    #records the incorrect guesses in incguesses and prints the hangman
+    #records the incorrect guesses in incguesses after every keyPress and displays the printHangman
     if event.key not in data['guessed'] and event.key not in data['word']:
         data['incguesses'] += 1
         printHangman(data['incguesses'])
@@ -76,11 +76,13 @@ def keyPress(event): #Should take one argument, event. The function should fill 
 
 if __name__ == '__main__':
     
+    #dictionaries
     data = {}
     data['guessed'] = ''
     data['incguesses'] = 0
     data['word'] = pickWord()
     
+    #colors and line color
     black = Color(0x000000,1)
     green = Color(0x00ff00,1)
     red = Color(0xff0000,1)
@@ -88,23 +90,24 @@ if __name__ == '__main__':
     
     blackline = LineStyle(4,black)
     
+    #names things that are always there
     floor = RectangleAsset(300,100,blackline, white)
     beamup = RectangleAsset(50,275,blackline, white)
     beamright = RectangleAsset(200,50,blackline, white)
     deathrope = LineAsset(0,40,blackline)
     underline = LineAsset(40,0,blackline)
     
-    if wordComplete() == True:
-        print('You win!')
-    
+    #sprites the underlines, each word has different number
     for i in range(0,len(data['word'])):
         Sprite(underline, (((60)*i),500))
     
+    #sprites things that are always there
     Sprite(floor, (50,300))
     Sprite(beamup, (50,25))
     Sprite(beamright, (50,0))
     Sprite(deathrope, (200,50))
     
+    #listens for keys
     for ch in 'abcdefghijklmnopqrstuvwxyz':
         App().listenKeyEvent('keydown',ch,keyPress)
     App().run()
