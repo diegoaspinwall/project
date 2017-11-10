@@ -57,8 +57,8 @@ mouthstop = 120
 def moveObject(object, objectystop):
     data['directiony'] = 1
     while object.y < objectystop:
-        framesincrease = data['frames']
-        if data['frames'] - framesincrease == 2:
+        data['frames'] = 0
+        if data['frames'] == 2:
             object.y += data['directiony']
 
 def step():
