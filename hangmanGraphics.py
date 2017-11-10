@@ -56,7 +56,7 @@ def printHangman(incguesses):
 
 #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letters that have been guessed.
 def keyPress(event):
-    while data['endgame'] == 0:
+    if data['endgame'] == 0:
         #records the incorrect guesses in incguesses after every keyPress and displays the printHangman
         if event.key not in data['guessed'] and event.key not in data['word']:
             data['incguesses'] += 1
@@ -79,6 +79,12 @@ def keyPress(event):
                 place +=1
                 if ch == event.key:
                     Sprite(TextAsset(event.key,fill=black,style='bold 30pt Times'), (((60)*place-50),450))
+    
+    else:
+        place = 0
+        for ch in data['word']:
+            place += 1
+            Sprite(TextAsset(ch,fill=red,style='bold 30pt Times'), (((60)*place-50),450))
 
 
 #runs game
