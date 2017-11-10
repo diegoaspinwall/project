@@ -56,10 +56,9 @@ mouthstop = 120
 #moves the hangman into place
 def moveObject(object, objectystop):
     data['directiony'] = 10
-    object.y += data['directiony']
-    
-    if object.y == objectystop:
-        data['directiony'] = 0
+    while object.y < objectystop:
+        object.y += data['directiony']
+
 
 
 #Should take no arguments. The function should choose a random word.
