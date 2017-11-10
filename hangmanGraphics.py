@@ -54,10 +54,10 @@ def printHangman(incguesses):
         Sprite(leg, (200,200))
     if incguesses==6:
         Sprite(leg2, (200,200))
-        Sprite(eye, (25,35))
-        Sprite(eye2, (25,35))
-        Sprite(eye, (30,40))
-        Sprite(eye2, (30,40))
+        Sprite(eye, (195,95))
+        Sprite(eye2, (195,95))
+        Sprite(eye, (200,100))
+        Sprite(eye2, (200,100))
         data['endgame'] += 1
 
 #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letters that have been guessed.
