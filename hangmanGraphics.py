@@ -83,34 +83,33 @@ def keyPress(event):
 #runs game
 if __name__ == '__main__':
     
-    while data['endgame'] == 0:
+    #dictionaries
+    data = {}
+    data['guessed'] = ''
+    data['incguesses'] = 0
+    data['word'] = pickWord()
+    data['endgame'] = 0
+
     
-        #dictionaries
-        data = {}
-        data['guessed'] = ''
-        data['incguesses'] = 0
-        data['word'] = pickWord()
-        data['endgame'] = 0
-        
-        #colors and line color
-        black = Color(0x000000,1)
-        green = Color(0x00ff00,1)
-        red = Color(0xff0000,1)
-        white = Color(0xffffff,1)
-        
-        blackline = LineStyle(4,black)
-        
-        #names things that are always there
-        floor = RectangleAsset(300,100,blackline, white)
-        beamup = RectangleAsset(50,275,blackline, white)
-        beamright = RectangleAsset(200,50,blackline, white)
-        deathrope = LineAsset(0,40,blackline)
-        underline = LineAsset(40,0,blackline)
-        
-        #sprites the underlines, each word has different number
-        for i in range(0,len(data['word'])):
-            Sprite(underline, (((60)*i),500))
-        
+    #colors and line color
+    black = Color(0x000000,1)
+    green = Color(0x00ff00,1)
+    red = Color(0xff0000,1)
+    white = Color(0xffffff,1)
+    
+    blackline = LineStyle(4,black)
+    
+    #names things that are always there
+    floor = RectangleAsset(300,100,blackline, white)
+    beamup = RectangleAsset(50,275,blackline, white)
+    beamright = RectangleAsset(200,50,blackline, white)
+    deathrope = LineAsset(0,40,blackline)
+    underline = LineAsset(40,0,blackline)
+    
+    #sprites the underlines, each word has different number
+    for i in range(0,len(data['word'])):
+        Sprite(underline, (((60)*i),500))
+    
         #sprites things that are always there
         Sprite(floor, (50,300))
         Sprite(beamup, (50,25))
