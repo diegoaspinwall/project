@@ -25,7 +25,7 @@ def wordComplete(): #Should take no arguments. The function should return True i
     for ch in data['word']:
         if ch in data['guessed']:
             letters += 1
-        if letters == len(data['word'])
+        if letters == len(data['word']):
             return True
         else:
             return False
