@@ -89,7 +89,7 @@ def keyPress(event):
         #checks for wordComplete every keyPress
         if wordComplete() == True:
             Sprite(TextAsset('You Win!',fill=green,style='bold 60pt Times'), (250,200))
-            data['endgame'] += 1
+            data['endgame'] -= 1
         
         #displays the guessedbank with every keyPress
         if event.key not in data['guessed']:
@@ -106,7 +106,7 @@ def keyPress(event):
                     Sprite(TextAsset(event.key,fill=black,style='bold 30pt Times'), (((60)*place-50),450))
     
     #if the hangman is complete sprite the answer and end game
-    else:
+    if data['endgame'] == 1:
         place = 0
         for ch in data['word']:
             place += 1
