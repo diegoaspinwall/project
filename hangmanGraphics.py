@@ -56,7 +56,7 @@ def printHangman(incguesses):
 
 #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letters that have been guessed.
 def keyPress(event):
-    while endgame == 0:
+    while data['endgame'] == 0:
         #records the incorrect guesses in incguesses after every keyPress and displays the printHangman
         if event.key not in data['guessed'] and event.key not in data['word']:
             data['incguesses'] += 1
