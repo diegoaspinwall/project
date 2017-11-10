@@ -81,10 +81,10 @@ def printHangman(incguesses):
         leg = Sprite(legp, (200,200))
     if incguesses==6:
         leg2 = Sprite(legp2, (200,200))
-        eye = Sprite(eyep, (185,85))
-        eye = Sprite(eyep2, (195,85))
-        eye = Sprite(eyep, (205,85))
-        eye = Sprite(eyep2, (215,85))
+        eye1 = Sprite(eyep, (185,85))
+        eye2 = Sprite(eyep2, (195,85))
+        eye3 = Sprite(eyep, (205,85))
+        eye4 = Sprite(eyep2, (215,85))
         mouth = Sprite(mouthp, (188,120))
         data['endgame'] += 1
 
