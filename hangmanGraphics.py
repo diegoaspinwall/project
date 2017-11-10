@@ -25,12 +25,12 @@ def pickWord():
 def wordComplete():
     letters = 0
     for ch in data['word']:
-        #if ch in data['guessed']:
-        letters += 1
-        if letters == len(data['word']):
-            return True
-        else:
-            return False
+        if ch in data['guessed']:
+            letters += 1
+    if letters == len(data['word']):
+        return True
+    else:
+        return False
 
 #Should take one argument, the number of incorrect guesses. The function should print out a new part of the body based on how many wrong guesses have occurred.
 def printHangman(incguesses):
@@ -63,8 +63,6 @@ def keyPress(event):
     #checks for wordComplete every keyPress
     if wordComplete() == True:
         print('You win!')
-    
-    wordComplete()
     
     #displays the guessedbank
     if event.key not in data['guessed']:
