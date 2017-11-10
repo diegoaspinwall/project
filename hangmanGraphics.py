@@ -28,6 +28,15 @@ eye = LineAsset(10,10,blackline)
 eye2 = LineAsset(-10,10,blackline)
 mouth = LineAsset(25,0,blackline)
 
+#moves the hangman into place
+def moveObject(object, objectystop):
+    data['directiony'] = 1
+    object.y += data['directiony']
+    
+    if object.y < objectystop:
+        data['directiony'] = -1*data['directiony']
+
+
 #Should take no arguments. The function should choose a random word.
 def pickWord():
     rword = randint(1,6)
@@ -121,6 +130,7 @@ if __name__ == '__main__':
     data['incguesses'] = 0
     data['word'] = pickWord()
     data['endgame'] = 0
+    data['directiony'] = 1
 
     #sprites things that are always there
     Sprite(floor, (50,300))
