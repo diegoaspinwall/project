@@ -23,7 +23,7 @@ def pickWord():
 
 #Should take no arguments. The function should return True if all the letters in the word have been guessed and False otherwise.
 def wordComplete():
-    letters = 1
+    letters = 0
     for ch in data['word']:
         if ch in data['guessed']:
             letters += 1
@@ -56,28 +56,29 @@ def printHangman(incguesses):
 
 #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letters that have been guessed.
 def keyPress(event):
-    #records the incorrect guesses in incguesses after every keyPress and displays the printHangman
-    if event.key not in data['guessed'] and event.key not in data['word']:
-        data['incguesses'] += 1
-        printHangman(data['incguesses'])
-    
-    #checks for wordComplete every keyPress
-    if wordComplete() == True:
-        Sprite(TextAsset('You Win!',fill=green,style='bold 60pt Times'), (250,200))
-    
-    #displays the guessedbank with every keyPress
-    if event.key not in data['guessed']:
-        data['guessed'] += event.key+' '
-    guessedbank = TextAsset(data['guessed'],fill=black,style='bold 30pt Times')
-    Sprite(guessedbank, (500,25))
-    
-    #displays letter in below that user correctly gets
-    if event.key in data['word']:
-        place = 0
-        for ch in data['word']:
-            place +=1
-            if ch == event.key:
-                Sprite(TextAsset(event.key,fill=black,style='bold 30pt Times'), (((60)*place-50),450))
+    while endgame == 0:
+        #records the incorrect guesses in incguesses after every keyPress and displays the printHangman
+        if event.key not in data['guessed'] and event.key not in data['word']:
+            data['incguesses'] += 1
+            printHangman(data['incguesses'])
+        
+        #checks for wordComplete every keyPress
+        if wordComplete() == True:
+            Sprite(TextAsset('You Win!',fill=green,style='bold 60pt Times'), (250,200))
+        
+        #displays the guessedbank with every keyPress
+        if event.key not in data['guessed']:
+            data['guessed'] += event.key+' '
+        guessedbank = TextAsset(data['guessed'],fill=black,style='bold 30pt Times')
+        Sprite(guessedbank, (500,25))
+        
+        #displays letter in below that user correctly gets
+        if event.key in data['word']:
+            place = 0
+            for ch in data['word']:
+                place +=1
+                if ch == event.key:
+                    Sprite(TextAsset(event.key,fill=black,style='bold 30pt Times'), (((60)*place-50),450))
 
 
 #runs game
