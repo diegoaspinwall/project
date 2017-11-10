@@ -58,6 +58,7 @@ def moveObject(object, objectystop):
     data['directiony'] = 1
     while object.y < objectystop:
         framesincrease = data['frames']
+        data['frames'] += 1
         if data['frames'] - framesincrease == 20:
             object.y += data['directiony']
 
