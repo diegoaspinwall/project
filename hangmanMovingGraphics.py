@@ -55,7 +55,6 @@ mouthstop = 120
 
 #moves the hangman into place
 def moveObject(object, objectystop):
-    data['directiony'] = 1
     if object.y < objectystop:
         object.y += data['directiony']
 
