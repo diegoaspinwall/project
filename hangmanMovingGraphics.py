@@ -56,7 +56,7 @@ mouthstop = 120
 #moves the hangman into place
 def moveObject(object, objectystop):
     if object.y < objectystop:
-        object.y += data['directiony']
+        object.y += 1
 
 
 #Should take no arguments. The function should choose a random word.
@@ -153,7 +153,6 @@ if __name__ == '__main__':
     data['incguesses'] = 0
     data['word'] = pickWord()
     data['endgame'] = 0
-    data['directiony'] = 1
 
     #sprites things that are always there
     Sprite(floor, (50,300))
