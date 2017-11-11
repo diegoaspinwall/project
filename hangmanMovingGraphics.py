@@ -28,7 +28,7 @@ eyep = LineAsset(10,10,blackline)
 eyep2 = LineAsset(-10,10,blackline)
 mouthp = LineAsset(25,0,blackline)
 
-head = Sprite(headp, (200,100))
+head = Sprite(headp, (200,10))
 arm2 = Sprite(armp2, (200,10))
 arm = Sprite(armp, (200,10))
 torso = Sprite(torsop, (200,10))
