@@ -141,7 +141,8 @@ def keyPress(event):
         place = 0
         for ch in data['word']:
             place += 1
-            Sprite(TextAsset(ch,fill=red,style='bold 30pt Times'), (((60)*place-50),450))
+            if ch not in data['guessed']:
+                Sprite(TextAsset(ch,fill=red,style='bold 30pt Times'), (((60)*place-50),450))
 
 
 #runs game
