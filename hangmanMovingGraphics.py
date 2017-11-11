@@ -58,7 +58,6 @@ def moveObject(object, objectystop):
     if object.y < objectystop:
         object.y += 1
 
-
 #Should take no arguments. The function should choose a random word.
 def pickWord():
     rword = randint(1,6)
