@@ -168,4 +168,4 @@ if __name__ == '__main__':
         #listens for keys
         for ch in 'abcdefghijklmnopqrstuvwxyz':
             App().listenKeyEvent('keydown',ch,keyPress)
-        App().run(step)
+        App().run()
