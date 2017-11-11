@@ -12,7 +12,7 @@ red = Color(0xff0000,1)
 white = Color(0xffffff,1)
 blackline = LineStyle(4,black)
     
-#names things that are always there
+#names things
 floor = RectangleAsset(300,100,blackline, white)
 beamup = RectangleAsset(50,275,blackline, white)
 beamright = RectangleAsset(200,50,blackline, white)
