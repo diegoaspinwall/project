@@ -24,9 +24,6 @@ headp = EllipseAsset(30,40,blackline,white)
 torsop = LineAsset(0,50,blackline)
 legp = LineAsset(-20,40,blackline)
 legp2 = LineAsset(20,40,blackline)
-eyep = LineAsset(10,10,blackline)
-eyep2 = LineAsset(-10,10,blackline)
-mouthp = LineAsset(25,0,blackline)
 
 head = Sprite(headp, (200,10))
 arm2 = Sprite(armp2, (200,10))
@@ -34,11 +31,6 @@ arm = Sprite(armp, (200,10))
 torso = Sprite(torsop, (200,10))
 leg = Sprite(legp, (200,10))
 leg2 = Sprite(legp2, (200,10))
-eye1 = Sprite(eyep, (185,10))
-eye2 = Sprite(eyep2, (195,10))
-eye3 = Sprite(eyep, (205,10))
-eye4 = Sprite(eyep2, (215,10))
-mouth = Sprite(mouthp, (188,10))
 
 #when to stop moving
 headstop = 100
@@ -47,11 +39,6 @@ armstop = 150
 torsostop = 150
 legstop = 200
 leg2stop = 200
-eye1stop = 85
-eye2stop = 85
-eye3stop = 85
-eye4stop = 85
-mouthstop = 120
 
 
 #moves the hangman into place
@@ -92,20 +79,20 @@ def printHangman(incguesses):
         data['object'] = head
         data['objectystop'] = headstop
     if incguesses==2:
-        moveObject(arm2, arm2stop)
+        data['object'] = arm2
+        data['objectystop'] = arm2stop
     if incguesses==3:
-        moveObject(arm, arm2stop)
+        data['object'] = arm
+        data['objectystop'] = armstop
     if incguesses==4:
-        moveObject(torso, torsostop)
+        data['object'] = torso
+        data['objectystop'] = torsostop
     if incguesses==5:
-        moveObject(leg, legstop)
+        data['object'] = leg
+        data['objectystop'] = legstop
     if incguesses==6:
-        moveObject(leg2, leg2stop)
-        moveObject(eye1, eye1stop)
-        moveObject(eye2, eye2stop)
-        moveObject(eye3, eye3stop)
-        moveObject(eye4, eye4stop)
-        moveObject(mouth, mouthstop)
+        data['object'] = leg2
+        data['objectystop'] = leg2stop
         data['endgame'] += 1
 
 #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letters that have been guessed.
