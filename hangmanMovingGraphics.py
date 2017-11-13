@@ -43,7 +43,7 @@ leg2stop = 200
 
 #moves the hangman into place
 def step():
-    if data['object'] < data['objectystop']:
+    if data['object'].y < data['objectystop']:
         data['object'].y += 1
 
 #Should take no arguments. The function should choose a random word.
