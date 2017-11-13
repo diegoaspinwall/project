@@ -55,12 +55,9 @@ mouthstop = 120
 
 
 #moves the hangman into place
-def moveObject(object, objectystop):
-    if object.y < objectystop:
-        object.y += 1
-
 def step():
-    head.x += 1
+    if data['object'] < data['objectystop']:
+        data['object'].y += 1
 
 #Should take no arguments. The function should choose a random word.
 def pickWord():
@@ -92,7 +89,8 @@ def wordComplete():
 #Should take one argument, the number of incorrect guesses. The function should print out a new part of the body based on how many wrong guesses have occurred.
 def printHangman(incguesses):
     if incguesses==1:
-        moveObject(head, headstop)
+        data['object'] = head
+        data['objectystop'] = headstop
     if incguesses==2:
         moveObject(arm2, arm2stop)
     if incguesses==3:
@@ -156,6 +154,8 @@ if __name__ == '__main__':
     data['incguesses'] = 0
     data['word'] = pickWord()
     data['endgame'] = 0
+    data['object'] = ''
+    data['objectystop'] = 0
 
     #sprites things that are always there
     Sprite(floor, (50,300))
