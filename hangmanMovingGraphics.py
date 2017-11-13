@@ -40,6 +40,7 @@ eye3 = Sprite(eyep, (205,10))
 eye4 = Sprite(eyep2, (215,10))
 mouth = Sprite(mouthp, (188,10))
 
+#when to stop moving
 headstop = 100
 arm2stop = 150
 armstop = 150
@@ -57,6 +58,9 @@ mouthstop = 120
 def moveObject(object, objectystop):
     if object.y < objectystop:
         object.y += 1
+
+def step:
+    head.x += 1
 
 #Should take no arguments. The function should choose a random word.
 def pickWord():
@@ -166,4 +170,4 @@ if __name__ == '__main__':
         #listens for keys
         for ch in 'abcdefghijklmnopqrstuvwxyz':
             App().listenKeyEvent('keydown',ch,keyPress)
-        App().run()
+        App().run(step)
