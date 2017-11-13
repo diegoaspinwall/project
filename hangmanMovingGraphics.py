@@ -2,6 +2,10 @@
 #11-1-17
 #hangmanGraphics.py - the second best game ever
 
+'''Mr Smedinghoff - this is my "moving graphics" version of the hangman program. The other one, placed in the same
+folder is more concise. Note: I created "thing" so that the step would be doing something before the user puts a 
+letter in. Also, don't click two wrong letters in short succession, because the poor guy falls apart -Diego'''
+
 from random import randint
 from ggame import *
 
@@ -26,6 +30,7 @@ legp = LineAsset(-20,40,blackline)
 legp2 = LineAsset(20,40,blackline)
 thingp = LineAsset(5,5,LineStyle(1, white))
 
+#sprites things
 head = Sprite(headp, (200,10))
 arm2 = Sprite(armp2, (200,10))
 arm = Sprite(armp, (200,10))
