@@ -59,7 +59,7 @@ def moveObject(object, objectystop):
     if object.y < objectystop:
         object.y += 1
 
-def step:
+def step():
     head.x += 1
 
 #Should take no arguments. The function should choose a random word.
