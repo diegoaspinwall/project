@@ -24,7 +24,7 @@ headp = EllipseAsset(30,40,blackline,white)
 torsop = LineAsset(0,50,blackline)
 legp = LineAsset(-20,40,blackline)
 legp2 = LineAsset(20,40,blackline)
-thingp = LineAsset(5,5,blackline)
+thingp = LineAsset(5,5,LineStyle(1, white))
 
 head = Sprite(headp, (200,10))
 arm2 = Sprite(armp2, (200,10))
