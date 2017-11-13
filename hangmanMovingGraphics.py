@@ -24,6 +24,7 @@ headp = EllipseAsset(30,40,blackline,white)
 torsop = LineAsset(0,50,blackline)
 legp = LineAsset(-20,40,blackline)
 legp2 = LineAsset(20,40,blackline)
+thingp = LineAsset(5,5,blackline)
 
 head = Sprite(headp, (200,10))
 arm2 = Sprite(armp2, (200,10))
@@ -31,6 +32,7 @@ arm = Sprite(armp, (200,10))
 torso = Sprite(torsop, (200,10))
 leg = Sprite(legp, (200,10))
 leg2 = Sprite(legp2, (200,10))
+thing = Sprite(thingp)
 
 #when to stop moving
 headstop = 100
@@ -39,6 +41,7 @@ armstop = 150
 torsostop = 150
 legstop = 200
 leg2stop = 200
+thingstop = 400
 
 
 #moves the hangman into place
@@ -141,8 +144,8 @@ if __name__ == '__main__':
     data['incguesses'] = 0
     data['word'] = pickWord()
     data['endgame'] = 0
-    data['object'] = ''
-    data['objectystop'] = 0
+    data['object'] = thing
+    data['objectystop'] = thingstop
 
     #sprites things that are always there
     Sprite(floor, (50,300))
