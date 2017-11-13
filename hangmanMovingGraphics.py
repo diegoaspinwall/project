@@ -28,6 +28,9 @@ headp = EllipseAsset(30,40,blackline,white)
 torsop = LineAsset(0,50,blackline)
 legp = LineAsset(-20,40,blackline)
 legp2 = LineAsset(20,40,blackline)
+eye = LineAsset(10,10,blackline)
+eye2 = LineAsset(-10,10,blackline)
+mouth = LineAsset(25,0,blackline)
 thingp = LineAsset(5,5,LineStyle(1, white))
 
 #sprites things
@@ -101,6 +104,11 @@ def printHangman(incguesses):
     if incguesses==6:
         data['object'] = leg2
         data['objectystop'] = leg2stop
+        Sprite(eye, (185,85))
+        Sprite(eye2, (195,85))
+        Sprite(eye, (205,85))
+        Sprite(eye2, (215,85))
+        Sprite(mouth, (188,120))
         data['endgame'] += 1
 
 #Should take one argument, event. The function should fill in the letter in the word if it was a correct guess and print the letter in the list of all letters that have been guessed.
