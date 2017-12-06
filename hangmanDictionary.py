@@ -2,6 +2,8 @@
 #12-6-17
 #hangmanDictionary.py - the second best game ever
 
+dictionary = open('engmix.txt')
+
 from random import randint
 from ggame import *
 
