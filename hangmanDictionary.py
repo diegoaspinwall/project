@@ -2,6 +2,9 @@
 #12-6-17
 #hangmanDictionary.py - the second best game ever
 
+'''
+NO DICTIONARY IN THIS UNIT. GOING TO UNIT 6
+'''
 dictionary = open('engmix.txt')
 
 from random import randint
