@@ -32,19 +32,7 @@ mouth = LineAsset(25,0,blackline)
 
 #Should take no arguments. The function should choose a random word.
 def pickWord():
-    rword = randint(1,6)
-    if rword == 1:
-        return 'computer'
-    if rword == 2:
-        return 'kernighan'
-    if rword == 3:
-        return 'binary'
-    if rword == 4:
-        return 'brython'
-    if rword == 5:
-        return 'programming'
-    if rword == 6:
-        return 'boolean'
+    randint(1,84100)
 
 #Should take no arguments. The function should return True if all the letters in the word have been guessed and False otherwise.
 def wordComplete():
